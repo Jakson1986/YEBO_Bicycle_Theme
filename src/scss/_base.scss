@@ -1,44 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-    font: 400 16px/30px $base-font;
-    color: $font-color;
+  font: 400 16px/30px $base-font;
+  color: $font-color;
 }
 
 a {
-    text-decoration: underline;
-    color: #000;
+  text-decoration: none;
+  color: $links-color;
 }
 
 input {
-    outline: none;
+  outline: none;
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .container {
-    max-width: 1630px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-shrink: 0;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+
+  &.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &__img {
+    position: absolute;
+    min-height: 102%;
+    min-height: 102%;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__text {
+    padding: 70px 65px 85px;
+    background: $white;
+    text-align: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 10px);
+      top: 100%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: $white transparent transparent transparent;
+      z-index: 1;
+    }
+
+    p {
+      text-align: justify;
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 50px;
+        height: 1px;
+        position: absolute;
+        left: calc(50% - 25px);
+        background-color: rgba(53, 55, 56, 0.2);
+        top: 32px;
+      }
+    }
+  }
+
+  &__static-img {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.col-100 {
+  @extend .col;
+  width: 100%;
+}
+
+.col-66 {
+  @extend .col;
+  width: 66.7%;
+}
+
+.col-50 {
+  @extend .col;
+  width: 50%;
+}
+
+.col-33 {
+  @extend .col;
+  width: 33.3%;
 }
