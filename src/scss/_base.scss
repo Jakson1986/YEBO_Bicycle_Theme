@@ -69,6 +69,10 @@ table {
   flex-wrap: wrap;
 }
 
+.row__first .col-33 {
+  width: 30%;
+}
+
 .col {
   flex-shrink: 0;
   flex-grow: 1;
@@ -127,12 +131,14 @@ table {
       text-transform: uppercase;
       letter-spacing: 4px;
       margin: 0px 0 8px 5px;
+      color: #353738;
     }
 
     p {
       text-align: justify;
       position: relative;
       padding-left: 0;
+      color: #848789;
 
       &:after {
         content: "";
@@ -155,8 +161,12 @@ table {
 .row__second {
   flex-direction: row-reverse;
 
+  & .col-33 {
+    width: 29.7%;
+  }
+
   & .col__text {
-    padding: 62px 70px 0 27px;
+    padding: 62px 69px 0 27px;
 
     &:after {
       left: calc(42% + 9px);
@@ -183,6 +193,33 @@ table {
   }
 }
 
+.row__third {
+  .col-33 {
+    width: 30%;
+  }
+
+  .col__icon {
+    left: 24.5%;
+    top: 44.5%;
+  }
+
+  .col__central {
+    width: 33%;
+
+    .col__text {
+      padding: 58px 69px 99px 65px;
+
+      img {
+        margin-bottom: 7px;
+      }
+
+      &:after {
+        left: calc(50% + -11px);
+      }
+    }
+  }
+}
+
 .col-100 {
   @extend .col;
   width: 100%;
@@ -200,5 +237,5 @@ table {
 
 .col-33 {
   @extend .col;
-  width: 30%;
+  width: 33.3%;
 }
