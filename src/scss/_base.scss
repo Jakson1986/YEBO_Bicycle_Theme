@@ -41,7 +41,7 @@ table {
 .container {
   max-width: 1630px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0;
 }
 
 #about {
@@ -58,7 +58,7 @@ table {
   }
 
   p {
-    margin: 0 187px 135px 220px;
+    margin: 0 202px 135px 235px;
     font-size: 18px;
     line-height: 1.9;
   }
@@ -142,7 +142,7 @@ table {
 
       &:after {
         content: "";
-        width: 50px;
+        width: 51px;
         height: 1px;
         position: absolute;
         left: calc(50% - 25px);
@@ -166,11 +166,11 @@ table {
   }
 
   & .col__text {
-    padding: 62px 69px 0 27px;
+    padding: 62px 69px 100px 27px;
 
     &:after {
       left: calc(42% + 9px);
-      top: 133%;
+      top: 100%;
     }
   }
 
@@ -180,7 +180,6 @@ table {
 
   p {
     letter-spacing: -0.1px;
-    margin-bottom: 100px;
   }
 
   .col__img {
@@ -196,6 +195,10 @@ table {
 .row__third {
   .col-33 {
     width: 30%;
+
+    .col__right {
+      width: 30.2%;
+    }
   }
 
   .col__icon {
@@ -217,6 +220,10 @@ table {
         left: calc(50% + -11px);
       }
     }
+  }
+
+  .col__right {
+    width: 30.5%;
   }
 }
 
