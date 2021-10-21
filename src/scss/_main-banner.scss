@@ -3,4 +3,9 @@
   background: url("../images/banner.jpg") no-repeat 50% 100%;
   background-size: cover;
   margin-bottom: 115px;
+
+  @include screen(1024) {
+       background-position: 50% 20%;
+        min-height: 100vh;
+  }
 }
