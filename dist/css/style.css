@@ -78,7 +78,7 @@ table {
     z-index: 10;
     left: -2%; }
   .col__text {
-    padding: 70px 28px 70px 65px;
+    padding: 70px 28px 90px 65px;
     background: #fff;
     text-align: center;
     position: relative; }
@@ -127,8 +127,7 @@ table {
   .row__second .col__text {
     padding: 62px 69px 100px 27px; }
     .row__second .col__text:after {
-      left: calc(42% + 9px);
-      top: 100%; }
+      left: calc(42% + 9px); }
   .row__second img {
     margin-bottom: 12px; }
   .row__second p {
@@ -141,8 +140,6 @@ table {
 
 .row__third .col-33 {
   width: 30%; }
-  .row__third .col-33 .col__right {
-    width: 30.2%; }
 
 .row__third .col__icon {
   left: 24.5%;
@@ -158,7 +155,7 @@ table {
       left: calc(50% + -11px); }
 
 .row__third .col__right {
-  width: 30.5%; }
+  width: 30.2%; }
 
 .col-100 {
   width: 100%; }

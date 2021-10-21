@@ -170,7 +170,6 @@ table {
 
     &:after {
       left: calc(42% + 9px);
-      top: 100%;
     }
   }
 
@@ -195,10 +194,6 @@ table {
 .row__third {
   .col-33 {
     width: 30%;
-
-    .col__right {
-      width: 30.2%;
-    }
   }
 
   .col__icon {
@@ -223,7 +218,7 @@ table {
   }
 
   .col__right {
-    width: 30.5%;
+    width: 30.2%;
   }
 }
 
