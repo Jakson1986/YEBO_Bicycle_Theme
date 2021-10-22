@@ -1,5 +1,14 @@
 .header {
+  position: fixed;
+  width: 100%; 
+  left: 0;
+  top: 0;
+  z-index: 100;
 
+  &.sticky {
+        background: rgba(255, 255, 255, .8);
+        box-shadow: 0 0 12px 3px rgba(0, 0, 0, .3);
+      }
   
 
   .navigation {
@@ -21,12 +30,17 @@
       overflow-y: auto;
       z-index: 100;
       padding-top: 80px;
+      transition: 0.3s;
+
+      
     }
 
     &__logo {
       flex-shrink: 0;
       width: 94px;
       margin: 9px 28px 0;
+
+      
 
       @include screen(768) {
         display: none;
@@ -36,10 +50,15 @@
         display: none;
 
         @include screen(768) {
-          display: block;
-      }
+          display: block;  
+          
+          img {
+            width: 65%;
+          }
+        }      
       }
     }
+
 
     &__right,
     &__left {
@@ -68,6 +87,14 @@
         display: block;
         padding: 5px 35px;
         position: relative;
+        transition: .3s;
+
+        &:hover {
+          color: #000;
+          text-decoration: underline;
+          font-size: 24px;
+          font-weight: 700;
+        }
 
         @include screen(768) {
           padding: 10px 15px;
@@ -78,13 +105,14 @@
       }
 
       & li + li a:before {
-          content: '.';
-          position: absolute;
-          left: -3;
-          bottom: 3;
-        
-          @include screen(768)
+        content: '.';
+        position: absolute;
+        left: -3px;
+        bottom: 3px;
+      
+          @include screen(768) {
           display: none;
+          }
       }
     }
 
@@ -134,10 +162,13 @@
     }
 
     img {
-      width: 45px;
+      width: 35px;
 
     }
   }
+  
+ 
+
   @include screen(768) {
     .container {
       display: flex;
