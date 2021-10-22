@@ -14,6 +14,8 @@ ol {
 img {
   max-width: 100%;
   height: auto;
+
+  
 }
 
 body {
@@ -63,6 +65,15 @@ table {
     margin: 0 202px 135px 235px;
     font-size: 18px;
     line-height: 1.9;
+
+    @include screen(1024) {
+      margin-bottom: 40px;
+      line-height: 25px;
+    }
+
+    @include screen(1024) {
+      margin: 0 25px 40px;
+    }
   }
 }
 
@@ -125,14 +136,18 @@ table {
       border-width: 10px 10px 0 10px;
       border-color: $white transparent transparent transparent;
       z-index: 1;
+
+      @include screen(1024) {
+        left: calc(50% - 10px);
+      }
     }
 
     h4 {
       font-size: 18px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      margin: 0px 0 8px 5px;
+      letter-spacing: 3.5px;
+      margin: 0px 0 8px 6px;
       color: #353738;
     }
 
@@ -150,7 +165,18 @@ table {
         left: calc(50% - 25px);
         background-color: rgba(53, 55, 56, 0.2);
         top: 184px;
+
+        @include screen(1024) {
+          display: none;
+        }
       }
+      
+    }
+
+     @include screen(1024) {
+      padding: 25px;
+      line-height: 20px;
+      
     }
   }
 
@@ -170,6 +196,13 @@ table {
   & .col__text {
     padding: 62px 69px 100px 27px;
 
+     @include screen(1024) {
+       padding: 25px;
+     }
+    
+
+   
+
     &:after {
       left: calc(42% + 9px);
     }
@@ -181,6 +214,8 @@ table {
 
   p {
     letter-spacing: -0.1px;
+
+    
   }
 
   .col__img {
@@ -206,8 +241,14 @@ table {
   .col__central {
     width: 33%;
 
-    .col__text {
-      padding: 58px 69px 99px 65px;
+    .col__text {   
+      padding: 58px 69px 99px 69px;
+      letter-spacing: -0.1px;
+
+      @include screen(1024) {
+        padding: 25px;
+
+      }
 
       img {
         margin-bottom: 7px;
@@ -222,6 +263,10 @@ table {
   .col__right {
     width: 30.2%;
   }
+
+  p {
+    letter-spacing: 1;
+  }
 }
 
 .col-100 {
@@ -232,6 +277,9 @@ table {
 .col-66 {
   @extend .col;
   width: 65%;
+
+  @include screen(768)
+    width: 40%;
 }
 
 .col-50 {
@@ -242,4 +290,50 @@ table {
 .col-33 {
   @extend .col;
   width: 33.3%;
+
+
 }
+
+#work {
+  margin-bottom: 125px ;
+
+  @include screen(1024) {
+    margin-bottom: 50px;
+  }
+}
+
+#social {
+  text-align: center;
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: #353738;
+    letter-spacing: 2.5px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+
+
+    span {
+      color: #848789;
+      font-weight: 300;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 1.4;
+    font-style: italic;
+    padding: 0 197px 0 230px;
+
+    @include screen(1024) {
+      font-size: 18px;
+    }
+     
+  }
+}
+
+
