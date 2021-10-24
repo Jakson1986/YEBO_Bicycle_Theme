@@ -349,10 +349,6 @@ table {
   @extend .col;
   width: 65%;
 
-  @include screen(768) {
-    width: 40%;
-  }
-
   @include screen(680) {
     width: 100%;
   }
