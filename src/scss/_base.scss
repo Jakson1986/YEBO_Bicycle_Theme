@@ -348,6 +348,13 @@ table {
 .col-66 {
   @extend .col;
   width: 65%;
+
+
+
+  @include screen(768){
+    width: 40%;
+  }
+
 }
 
 .col-50 {
