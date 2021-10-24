@@ -1,16 +1,23 @@
 window.$ = window.jQuery = require('jquery');
+//import Swiper from 'swiper';
 
 $(document).ready(function () {
     $('.header').on('click', '.header__mobile-menu, .navigation__close', function () {
         $('.navigation').slideToggle();
     })
 
-    const swiper = new Swiper('.swiper', {
+    const reviews = new Swiper('.reviews__slider', {
+        loop: true,
         pagination: {
             el: '.swiper-pagination',
-            type: 'bullets',
+            
         },
-    })
+
+        autoplay: {
+            delay: 5000,
+        }
+    });
+   
 });
 
 $(window).resize(function () {
@@ -26,5 +33,3 @@ $(window).scroll(function () {
 
     (windowPosition >= bannerHeight - header.outerHeight()) ? header.addClass('sticky') : header.removeClass('sticky');
 })
-
-

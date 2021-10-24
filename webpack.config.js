@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
     entry: ["./src/js/index.js", "./src/scss/main.scss"],
@@ -83,6 +83,7 @@ const config = {
         new MiniCssExtractPlugin({
             filename: "css/style.css"
         }),
+        new UglifyJSPlugin(),
         new HtmlWebpackPlugin({
             filename: './index.html',
             template: "./src/index.html"
