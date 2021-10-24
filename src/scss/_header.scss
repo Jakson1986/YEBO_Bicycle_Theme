@@ -1,21 +1,19 @@
 .header {
   position: fixed;
-  width: 100%; 
+  width: 100%;
   left: 0;
   top: 0;
   z-index: 100;
 
   &.sticky {
-        background: rgba(255, 255, 255, .8);
-        box-shadow: 0 0 12px 3px rgba(0, 0, 0, .3);
-      }
-  
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
+  }
 
   .navigation {
     display: flex;
     align-items: center;
     justify-content: center;
-
 
     @include screen(768) {
       display: none;
@@ -31,16 +29,12 @@
       z-index: 100;
       padding-top: 80px;
       transition: 0.3s;
-
-      
     }
 
     &__logo {
       flex-shrink: 0;
       width: 94px;
       margin: 9px 28px 0;
-
-      
 
       @include screen(768) {
         display: none;
@@ -50,15 +44,14 @@
         display: none;
 
         @include screen(768) {
-          display: block;  
-          
+          display: block;
+
           img {
             width: 65%;
           }
-        }      
+        }
       }
     }
-
 
     &__right,
     &__left {
@@ -75,7 +68,6 @@
         text-align: center;
         width: 100%;
         padding: 0;
-
       }
 
       a {
@@ -87,7 +79,7 @@
         display: block;
         padding: 5px 35px;
         position: relative;
-        transition: .3s;
+        transition: 0.3s;
 
         &:hover {
           color: #000;
@@ -100,19 +92,18 @@
           padding: 10px 15px;
           font-size: 18px;
           text-transform: uppercase;
-          
-        }       
+        }
       }
 
       & li + li a:before {
-        content: '.';
+        content: ".";
         position: absolute;
         left: -3px;
         bottom: 3px;
-      
-          @include screen(768) {
+
+        @include screen(768) {
           display: none;
-          }
+        }
       }
     }
 
@@ -124,30 +115,28 @@
       display: none;
 
       @include screen(768) {
-       display: block;
-       position: absolute;
-       top: 15px;
-       right: 15px;
-       width: 45px;
-       height: 45px;
-
-       &:before,
-       &:after {
-        content: '';
-        width: 45px;
-        height: 2px;
-        background: $green;
+        display: block;
         position: absolute;
-        left: 0;
-        top: 50%; 
-        transform: rotate(45deg) ;
-       }
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
 
-       &:after {
-         transform: rotate(-45deg);
-       }
+        &:before,
+        &:after {
+          content: "";
+          width: 45px;
+          height: 2px;
+          background: $green;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: rotate(45deg);
+        }
 
-
+        &:after {
+          transform: rotate(-45deg);
+        }
       }
     }
   }
@@ -163,11 +152,8 @@
 
     img {
       width: 35px;
-
     }
   }
-  
- 
 
   @include screen(768) {
     .container {
