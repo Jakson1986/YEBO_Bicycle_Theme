@@ -126,7 +126,7 @@ table {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @include screen(320) {
+    @include screen(1024) {
       max-width: 100%;
     }
   }
@@ -258,11 +258,7 @@ table {
   }
 
   .col__img {
-    left: 52%;
-
-    @include screen(680) {
-      left: 50%;
-    }
+    left: 50%;
   }
 
   .col__icon {
@@ -273,7 +269,7 @@ table {
 
 .row__third {
   .col-33 {
-    width: 30%;
+    width: 30.1%;
 
     @include screen(680) {
       width: 100%;
@@ -349,19 +345,20 @@ table {
   @extend .col;
   width: 65%;
 
-
-
-  @include screen(768){
+  @include screen(768) {
     width: 40%;
   }
 
+  @include screen(680) {
+    width: 100%;
+  }
 }
 
 .col-50 {
   @extend .col;
   width: 50%;
 
-  @include screen(1024) {
+  @include screen(768) {
     width: 100%;
   }
 }
@@ -381,8 +378,6 @@ table {
 
 #shop {
   .row {
-    flex-direction: row;
-
     @include screen(500) {
       flex-direction: column;
     }
@@ -400,7 +395,7 @@ table {
       letter-spacing: 2.5px;
       font-size: 18px;
       font-weight: 700;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
 
       @include screen(1024) {
         letter-spacing: 2px;
@@ -429,13 +424,17 @@ table {
         padding: 0 100px;
       }
 
+      @include screen(500) {
+        padding: 0 50px;
+      }
+
       @include screen(320) {
         padding: 0 50px;
       }
     }
 
     &__slider {
-      padding-bottom: 119px;
+      padding-bottom: 121px;
       margin-bottom: 60px;
 
       @include screen(1024) {
@@ -494,21 +493,29 @@ table {
     }
   }
 
-  form {
-    margin-bottom: 100px;
+  div {
+    margin-bottom: 110px;
+
+    @include screen(1024) {
+      margin-bottom: 40px;
+    }
   }
+
   input {
     letter-spacing: -0.5px;
     font-size: 20px;
     line-height: 24px;
     font-style: italic;
-    padding: 22px 144px 20px 23px;
+    padding-left: 24px;
     border: 1px solid #d3d7d9;
     margin-right: 4px;
+    width: 400px;
+    height: 69px;
 
     @include screen(1024) {
-      padding: 10px 60px;
       font-size: 16px;
+      width: 300px;
+      height: 40px;
     }
 
     @include screen(320) {
@@ -518,11 +525,13 @@ table {
 
     &::placeholder {
       color: #929292;
+      opacity: 0.5;
     }
   }
+
   button {
-    padding: 20px 41px;
-    margin-left: 5px;
+    width: 126px;
+    height: 69px;
     font-weight: 300;
     font-size: 24px;
     line-height: 24px;
@@ -532,17 +541,127 @@ table {
     transition: 0.3s;
 
     @include screen(1024) {
-      padding: 10px 20px;
+      height: 40px;
+      width: 70px;
       font-size: 16px;
-    }
-
-    @include screen(1024) {
       padding: 5px 15px;
       font-size: 14px;
     }
 
+    @include screen(376) {
+      margin-top: 10px;
+    }
+
     &:hover {
       opacity: 0.8;
+    }
+  }
+}
+
+.footer {
+  background: #f7f7f7;
+
+  @include screen(680) {
+    .row {
+      flex-direction: row;
+    }
+  }
+
+  @include screen(425) {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  .col-33 {
+    address {
+      padding: 0 0 21px 141px;
+
+      @include screen(1000) {
+        padding: 0 0 0 40px;
+      }
+      a {
+        color: $font-color;
+      }
+
+      .city {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        font-style: normal;
+      }
+    }
+
+    p {
+      font-size: 13.9px;
+      line-height: 18px;
+      color: $font-color;
+    }
+
+    &__social {
+      ul {
+        display: flex;
+      }
+
+      @include screen(580) {
+        width: 20%;
+      }
+    }
+
+    li {
+      padding: 0 7px 5px;
+
+      @include screen(768) {
+        padding: 0;
+
+        img {
+          max-width: 70%;
+        }
+      }
+    }
+
+    @include screen(1024) {
+      min-height: 0;
+      padding: 20px 0;
+    }
+
+    @include screen(425) {
+      width: 100%;
+    }
+  }
+
+  .col-33:last-child {
+    @include screen(580) {
+      width: 20%;
+    }
+
+    @include screen(425) {
+      width: 100%;
+    }
+
+    p {
+      padding: 0 133px 19px 0;
+      position: relative;
+      font-style: italic;
+
+      @include screen(680) {
+        padding: 0 0 30px 0;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        background: url(../images/Y-E-B-O-Logo.png) no-repeat;
+        width: 100%;
+        height: 100%;
+        left: 45%;
+        top: -17%;
+
+        @include screen(680) {
+          left: 20%;
+          top: 40%;
+        }
+      }
     }
   }
 }
