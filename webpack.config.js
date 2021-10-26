@@ -15,6 +15,7 @@ const config = {
     devtool: "source-map",
     mode: "production",
     optimization: {
+        minimize: true,
         minimizer: [
             new TerserPlugin({
                 sourceMap: true,

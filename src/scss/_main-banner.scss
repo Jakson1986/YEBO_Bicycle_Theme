@@ -9,6 +9,10 @@
     height: 380px;
     min-height: 0;
     margin-bottom: 50px;
+
+    a img {
+      width: 75%;
+    }
   }
 
   @include screen(768) {
